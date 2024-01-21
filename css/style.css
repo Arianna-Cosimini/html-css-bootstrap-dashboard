@@ -1,0 +1,26 @@
+.style-height-img{
+    height: 40px;
+    width: 40px;
+}
+
+.style-height-img-2{
+    min-width: 130px;
+}
+
+.my-sidebar-big{
+    width: 148px;
+    height: calc(100vh - 54px);
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 991px){
+    .my-sidebar-big{
+        max-width:76px;
+    }
+}
+
+.test{
+    padding: 20px;
+    background-color: aqua;
+}

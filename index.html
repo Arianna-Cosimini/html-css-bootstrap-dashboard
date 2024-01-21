@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    
     <link rel="stylesheet" href="./css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,86 +14,285 @@
 
     <title>Bootstrap Dashboard</title>
 </head>
-<body>
+<body class="bg-body-tertiary">
 
+    <!-- navbar -->
 
-    <nav class="navbar navbar-light">
+    <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand">
-            <div class="mobile-logo d-lg-none" style="height: 40px; width: 40px;">
-                <img class="img-fluid " src="./Img/mobile-logo.png" alt="">
+        <a class="navbar-brand" href="#">
+            <!-- <img src="./Img/logo.svg" alt="Logo"class="d-inline-block align-text-top"> -->
+            <img class="d-none d-lg-block ps-2" src="./Img/logo.svg" alt="logo boolean">
+                    <img class="style-height-img d-lg-none" src="./Img/mobile-logo.png" alt="">
+        </a>
+
+        <form class=" flex-grow-1">
+            <div class="input-group">
+            <span class="input-group-text bg-transparent border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" class="form-control border-start-0 ps-0" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
             </div>
-            
-            <img class="d-none d-sm-none d-md-none d-lg-block" src="Img/logo.svg" alt="">
-          </a>
+        </form>
 
-          <form class="flex-grow-1">
-              <div class="input-group">
-                <span class="input-group-text bg-transparent border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" class="form-control border-start-0 ps-0" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
-              </div>
-          </form>
 
-          <div class="icon-nav d-flex justify-content-around gap-4 ps-4   ">
-            <i class="fa-solid fa-list-ul text-black opacity-75"></i>
-            <i class="fa-solid fa-circle-question text-black opacity-75"></i>
-            <i class="fas fa-ellipsis-v text-black opacity-75"></i>
-            <i class="fa-solid fa-bell text-warning "></i>
+        <div class="icon-nav d-flex gap-4 px-4">
+            <i class="fa-solid fa-list-ul text-black opacity-75 d-none d-lg-block"></i>
+            <i class="fa-solid fa-circle-question text-black opacity-75 d-none d-lg-block"></i>
+            <i class="fas fa-ellipsis-v text-black opacity-75 d-none d-lg-block"></i>
+            <i class="fa-solid fa-bell text-warning"></i>
           </div>
-         
-
         </div>
-      </nav>
 
-      <div class="container-fluid">
-        <div class="row">
-            <div class="sidebar col-1 d-flex flex-column align-items-center  p-3 justify-content-between bg-dark" style="height: calc(100vh - 56px);">
-                <div class="menu-sidebar">
-                    <ul class="nav flex-column align-items-center ">
-                        <li class="nav-item">
-                            <a class="nav-link text-white d-flex gap-3 fs-5  align-items-center" href="#">
-                                <i class="fa-solid fa-house text-white"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white d-flex gap-3 fs-5  align-items-center" href="#">
-                                <i class="fa-solid fa-chart-simple"></i> Stats
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white d-flex gap-3 fs-5  align-items-center" href="#">
-                                <i class="fa-solid fa-signal"></i> Signals
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+       
+  </nav>
 
-                <div class="sidebar-bottom ">
-                    <a class="nav-link text-white d-flex gap-3 fs-5  align-items-center " href="#">
-                        <i class="fa-solid fa-cog text-white"></i> Admin
-                    </a>
-                </div>
-            </div>
-                <div class="col-11">
-                   <div class="row">
-                    <div class="col-12 d-flex justify-content-between bg-black">
-                        <div class="bread-crumbs">
-                            <div class="bread-crumbs-title d-flex">
-                                <h1 class="text-white ">Boolean</h1>
-                                <button class="btn btn-primary rounded-pill"> ciao che fai</button>
-                            </div>
-                           
-                        </div>
-                       
-                    </div>
-                   </div>
-                </div>
-            </div>
+  <!-- fine navbar -->
+
+  <!-- sidebar -->
+
+  <div class="container-fluid">
+        <div class="row flex-nowrap">
             
+                <div class="col-auto d-flex px-0 bg-dark">
+                    <div class="my-sidebar-big d-flex flex-column justify-content-between align-items-center pb-4">
+                        <div id="sidebar-nav"  class="d-flex flex-column justify-content-between align-items-center align-items-sm-start px-3 pt-2 text-white my-sidebar">
+                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link text-white align-middle px-0">
+                                        <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-lg-inline">Home</span>
+                                    </a>
+                                </li>
+                            
+                                <li>
+                                    <a href="#" class="nav-link text-white px-0 align-middle">
+                                        <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-lg-inline">Stats</span></a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="nav-link text-white px-0 align-middle">
+                                        <i class="fa-solid fa-signal"></i> <span class="ms-1 d-none d-lg-inline">Signal</span> </a>
+                                </li>
+                            </ul>
+                            
+                            
+                        </div>
+                        <div class="sidebar-bottom d-flex align-items-center gap-3">
+                            <a href="#" class="nav-link text-white px-0 align-middle">
+                                <i class="fa-solid fa-cog"></i> <span class="ms-1 d-none d-lg-inline">Admin</span> </a>
+                        </div>
+                    </div>
+           
+                </div>
+
+  <!--fine sidebar -->
+
+  <!-- header -->
+
+            <div id="header" class="col">
+                <div class="row d-flex flex-column-reverse flex-md-row-reverse bg-primary text-white ">
+                    <div class="col col-md-5 col-lg-6  order-2">
+                        <div class="bread-crumbs d-flex flex-column ">
+
+                            <div class="col">
+                                <div class="title gap-3 d-flex align-items-center pt-3 order-1 order-lg-0">
+                                    <div class="bread-crumbs-title d-flex gap-3">
+                                        <h1>Boolean</h1>
+                                        
+                                    </div>
+
+                                    <a class="text-white text-decoration-none " href="">
+                                        <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                        Piano blaze
+                                    </button></a>
+                                    
+                                </div>
+                            </div>
+
+                        
+                                <nav aria-label="breadcrumb" class="bg-transparent " >
+                                    <ol class="breadcrumb  d-flex align-items-center gap-2 indigo lighten-6 first-1">
+                                        <li><a class="text-white text-decoration-none " href="">
+                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                            3 app
+                                        </button></a>
+                                            <img class="ms-md-2" src="https://img.icons8.com/offices/30/000000/double-right.png" width="20" height="20"> 
+                                        </li>
+                                        
+                                        <li class="d-lg-none"><a class="text-white text-decoration-none" href="#"> <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button></a></li>
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
+                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                            Boolean mobile app
+                                            </button>
+                                        </a></li>
+                                    
+                                        
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
+                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                        Boolean web app
+                                            </button>
+                                        </a></li>
+                                        
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
+                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                            Boolean blog app
+                                            </button>
+                                        </a></li>    
+                                    </ol>
+                                </nav>
+                        </div>  
+                    </div>
+
+                    <div class="col col-md-3 col-lg-4 order-md-1">
+                        <div class="online-students pt-2">
+                            <p class="m-0">Studenti online negli ultimi 30 minuti</p>
+                            <span class="fs-3 ">125</span>
+                        </div>
+                    </div>
+
+                    <div class="col col-lg-2 order-3 order-md-0">
+                        <div class="new-student d-flex gap-3 align-items-center pt-3 ">
+                            <div class="new-student-text">
+                                <p class="m-0">Nuovo studente</p>
+                            </div>
+                        
+                            <button type="button" class="btn btn-outline-light text-center ">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                
+            </div>
+
+<!--fine header  -->
+
+            <!--main  -->
+            <div class="container-fluid">
+                <div class="row flex-nowrap">
+                    <div class="col-8 my-3 border border-light-subtle rounded">
+                        <div class="row border-bottom">
+                            <div class="col ">
+                                <h1>Prossime classi</h1>
+                            </div>
+                        </div>
+                        
+
+                        <div class="row">
+                         
+                                <div class="col-6">Nome</div>
+                                <div class="col-2 text-center">Data inizio</div>
+                                <div class="col-1 text-center">ROI</div>
+                                <div class="col-1 text-center">Stato</div>
+                                <div class="col-2 text-center">Azioni</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+                        
+                
+                    </div>
+
+                    <div class="col-4">
+                        <div class="col">
+                            <h1>Ciao</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8">
+                    <div class="col">
+                        <h1>Ciao</h1>
+                    </div>
+
+                    <div class="row">
+                     
+                            <div class="col-8 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                            <div class="col-1 test">hello</div>
+                    </div>
+            </div>
+
+            <!--fine main  -->
+
+
+
         </div>
-      </div>
+    </div>
 
 
+
+                
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
