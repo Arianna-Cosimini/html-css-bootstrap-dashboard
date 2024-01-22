@@ -1,22 +1,28 @@
+
+
 .style-height-img{
     height: 40px;
-    width: 40px;
 }
 
 .style-height-img-2{
     min-width: 130px;
 }
 
-.my-sidebar-big{
-    width: 148px;
+.my-sidebar{
+    width: 137px;
+}
+
+.my-height{
     height: calc(100vh - 54px);
+}
+.my-height-container{
+    height: calc(100vh - 174px);
 }
 
 
-
 @media screen and (min-width: 0px) and (max-width: 991px){
-    .my-sidebar-big{
-        max-width:76px;
+    .my-sidebar{
+        width:68px;
     }
 }
 

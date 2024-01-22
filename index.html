@@ -1,300 +1,579 @@
 <!DOCTYPE html>
 <html lang="it" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <title>Bootstrap Dashboard</title>
 </head>
-<body class="bg-body-tertiary">
+
+<body>
 
     <!-- navbar -->
 
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <!-- <img src="./Img/logo.svg" alt="Logo"class="d-inline-block align-text-top"> -->
-            <img class="d-none d-lg-block ps-2" src="./Img/logo.svg" alt="logo boolean">
-                    <img class="style-height-img d-lg-none" src="./Img/mobile-logo.png" alt="">
-        </a>
+            <a class="navbar-brand" href="#">
+                <!-- <img src="./Img/logo.svg" alt="Logo"class="d-inline-block align-text-top"> -->
+                <img class="d-none d-lg-block ps-2" src="./Img/logo.svg" alt="logo boolean">
+                <img class="style-height-img d-lg-none" src="./Img/mobile-logo.png" alt="">
+            </a>
 
-        <form class=" flex-grow-1">
-            <div class="input-group">
-            <span class="input-group-text bg-transparent border-end-0"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type="text" class="form-control border-start-0 ps-0" id="input-group-2" name="input-group-2" placeholder="Lorem Ipsum">
+            <form class=" flex-grow-1">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-end-0"><i
+                            class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control border-start-0 ps-0" id="input-group-2" name="input-group-2"
+                        placeholder="Lorem Ipsum">
+                </div>
+            </form>
+
+
+            <div class="icon-nav d-flex gap-4 px-4">
+                <i class="fa-solid fa-list-ul text-black opacity-75 d-none d-lg-block"></i>
+                <i class="fa-solid fa-circle-question text-black opacity-75 d-none d-lg-block"></i>
+                <i class="fas fa-ellipsis-v text-black opacity-75 d-none d-lg-block"></i>
+                <i class="fa-solid fa-bell text-warning"></i>
             </div>
-        </form>
-
-
-        <div class="icon-nav d-flex gap-4 px-4">
-            <i class="fa-solid fa-list-ul text-black opacity-75 d-none d-lg-block"></i>
-            <i class="fa-solid fa-circle-question text-black opacity-75 d-none d-lg-block"></i>
-            <i class="fas fa-ellipsis-v text-black opacity-75 d-none d-lg-block"></i>
-            <i class="fa-solid fa-bell text-warning"></i>
-          </div>
         </div>
 
-       
-  </nav>
 
-  <!-- fine navbar -->
+    </nav>
 
-  <!-- sidebar -->
+    <!-- fine navbar -->
 
-  <div class="container-fluid">
+    <!-- sidebar -->
+
+    <div class="container-fluid">
         <div class="row flex-nowrap">
-            
-                <div class="col-auto d-flex px-0 bg-dark">
-                    <div class="my-sidebar-big d-flex flex-column justify-content-between align-items-center pb-4">
-                        <div id="sidebar-nav"  class="d-flex flex-column justify-content-between align-items-center align-items-sm-start px-3 pt-2 text-white my-sidebar">
-                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link text-white align-middle px-0">
-                                        <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-lg-inline">Home</span>
-                                    </a>
-                                </li>
-                            
-                                <li>
-                                    <a href="#" class="nav-link text-white px-0 align-middle">
-                                        <i class="fa-solid fa-chart-simple"></i> <span class="ms-1 d-none d-lg-inline">Stats</span></a>
-                                </li>
-                                
-                                <li>
-                                    <a href="#" class="nav-link text-white px-0 align-middle">
-                                        <i class="fa-solid fa-signal"></i> <span class="ms-1 d-none d-lg-inline">Signal</span> </a>
-                                </li>
-                            </ul>
-                            
-                            
-                        </div>
-                        <div class="sidebar-bottom d-flex align-items-center gap-3">
-                            <a href="#" class="nav-link text-white px-0 align-middle">
-                                <i class="fa-solid fa-cog"></i> <span class="ms-1 d-none d-lg-inline">Admin</span> </a>
-                        </div>
+
+            <div class="col-auto px-0 bg-dark">
+                <div
+                    class="my-sidebar my-height overflow-y-auto d-flex flex-column justify-content-between align-items-center pb-4">
+                    <div id="sidebar-nav"
+                        class="d-flex flex-column justify-content-between align-items-center px-3 pt-2 text-white">
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                            id="menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white align-middle px-0">
+                                    <i class="fa-solid fa-house"></i> <span class="ms-1 d-none d-lg-inline">Home</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="nav-link text-white px-0 align-middle">
+                                    <i class="fa-solid fa-chart-simple"></i> <span
+                                        class="ms-1 d-none d-lg-inline">Stats</span></a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="nav-link text-white px-0 align-middle">
+                                    <i class="fa-solid fa-signal"></i> <span
+                                        class="ms-1 d-none d-lg-inline">Signal</span> </a>
+                            </li>
+                        </ul>
+
+
                     </div>
-           
+                    <div class="sidebar-bottom d-flex align-items-center gap-3">
+                        <a href="#" class="nav-link text-white px-0 align-middle">
+                            <i class="fa-solid fa-cog"></i> <span class="ms-1 d-none d-lg-inline">Admin</span> </a>
+                    </div>
                 </div>
 
-  <!--fine sidebar -->
+            </div>
 
-  <!-- header -->
+            <!--fine sidebar -->
 
-            <div id="header" class="col">
-                <div class="row d-flex flex-column-reverse flex-md-row-reverse bg-primary text-white ">
-                    <div class="col col-md-5 col-lg-6  order-2">
-                        <div class="bread-crumbs d-flex flex-column ">
+            <!-- header -->
 
-                            <div class="col">
-                                <div class="title gap-3 d-flex align-items-center pt-3 order-1 order-lg-0">
-                                    <div class="bread-crumbs-title d-flex gap-3">
-                                        <h1>Boolean</h1>
-                                        
+            <div id="container-big" class="col my-height overflow-y-auto">
+                <div id="header">
+                    <div class="row d-flex flex-column-reverse flex-md-row-reverse bg-primary text-white ">
+                        <div class="col col-md-5 col-lg-6  order-2">
+                            <div class="bread-crumbs d-flex flex-column ">
+
+                                <div class="col">
+                                    <div class="title gap-3 d-flex align-items-center pt-3 order-1 order-lg-0">
+                                        <div class="bread-crumbs-title d-flex gap-3">
+                                            <h2>Boolean</h2>
+
+                                        </div>
+
+                                        <a class="text-white text-decoration-none " href="">
+                                            <button type="button"
+                                                class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                Piano blaze
+                                            </button></a>
+
+                                    </div>
+                                </div>
+
+
+                                <nav aria-label="breadcrumb" class="bg-transparent ">
+                                    <ol class="breadcrumb  d-flex align-items-center gap-2 indigo lighten-6 first-1">
+                                        <li><a class="text-white text-decoration-none " href="">
+                                                <button type="button"
+                                                    class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                    3 app
+                                                </button></a>
+                                            <img class="ms-md-2"
+                                                src="https://img.icons8.com/offices/30/000000/double-right.png"
+                                                width="20" height="20">
+                                        </li>
+
+                                        <li class="d-lg-none"><a class="text-white text-decoration-none" href="#">
+                                                <button type="button"
+                                                    class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button></a></li>
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none "
+                                                href="">
+                                                <button type="button"
+                                                    class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                    Boolean mobile app
+                                                </button>
+                                            </a></li>
+
+
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none "
+                                                href="">
+                                                <button type="button"
+                                                    class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                    Boolean web app
+                                                </button>
+                                            </a></li>
+
+                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none "
+                                                href="">
+                                                <button type="button"
+                                                    class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
+                                                    Boolean blog app
+                                                </button>
+                                            </a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-3 col-lg-4 order-md-1">
+                            <div class="online-students pt-2">
+                                <p class="m-0">Studenti online negli ultimi 30 minuti</p>
+                                <span class="fs-3 ">125</span>
+                            </div>
+                        </div>
+
+                        <div class="col col-lg-2 order-3 order-md-0">
+                            <div class="new-student d-flex gap-3 align-items-center pt-3 ">
+                                <div class="new-student-text">
+                                    <p class="m-0">Nuovo studente</p>
+                                </div>
+
+                                <button type="button" class="btn btn-outline-light text-center ">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+
+                <!--fine header  -->
+
+                <!--main  -->
+                <div id="main" class="container-fluid my-height-container overflow-auto">
+                    <div class="row flex-nowrap flex-column flex-lg-row">
+                        <div class="col-12 col-lg-8 my-3">
+
+                            <!-- prossime classi -->
+                            <div class="col-12 py-2 border border rounded">
+                                <div class="row ps-3">
+                                    <div class="col ">
+                                        <h3>Prossime classi</h3>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1">
+
+                                <div class="row ps-3 px-3 ps-lg-3 pe-lg-0 py-2">
+
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">Nome</div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">Data inizio
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-xl-1 text-center d-none d-md-block">ROI</div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center">Stato</div>
+                                    <div class="col-3 col-lg-3 col-md-2 col-xl-2 text-center">Azioni</div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 75</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>15 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-success btn-sm py-0 rounded">Done</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 76</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>16 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-success btn-sm py-0 rounded">Done</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 77</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>17 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center">
+                                        <button type="button"
+                                            class="btn btn-warning btn-sm py-0 rounded  text-white ">Process</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 78</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>18 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-success btn-sm py-0 rounded">Done</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 79</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>19 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-danger btn-sm py-0 rounded">Failed</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 80</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>20 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-success btn-sm py-0 rounded">Done</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+                                <div class="row px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 81</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>21 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button"
+                                            class="btn btn-danger  btn-sm py-0 rounded">Failed</button>
+                                    </div>
+                                    <div
+                                        class="col-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <hr class="my-1 border-light-subtle ">
+
+
+                                <div class="row  px-3 ps-lg-3 pe-lg-0 py-2">
+                                    <div class="col-6 col-md-4 col-lg-3 col-xl-6">
+                                        <img class="fluid style-height-img" src="./Img/class-avatar.jpg" alt="">
+                                        <span>Classe 75</span>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2 text-center d-none d-md-block">
+                                        <span>22 Feb 2021</span>
+                                    </div>
+                                    <div class="col-1 col-lg-1 col-xl-1 text-center d-none d-md-block ">
+                                        <span>20%</span>
+                                    </div>
+                                    <div class="col-3 col-lg-2 col-md-2 col-xl-1 text-center ">
+                                        <button type="button" class="btn btn-success btn-sm py-0 rounded">Done</button>
+                                    </div>
+                                    <div
+                                        class="col-3  col-md-2 col-lg-3 col-xl-2 d-flex justify-content-center gap-2 text-center ">
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-secondary">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
                                     </div>
 
-                                    <a class="text-white text-decoration-none " href="">
-                                        <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                        Piano blaze
-                                    </button></a>
-                                    
+                                    <hr class="my-1 border-light-subtle ">
+
+                                </div>
+
+                            </div>
+                            <!--fine prossime classi -->
+
+                            <!-- faq -->
+                            <div class="col-8">
+                                <div class="col">
+                                    <h3>F.A.Q</h3>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-8 ">hello</div>
+                                    <div class="col-1 ">hello</div>
+                                    <div class="col-1 ">hello</div>
+                                    <div class="col-1 ">hello</div>
+                                    <div class="col-1 ">hello</div>
+                                </div>
+                            </div>
+                            <!-- fine faq -->
+
+                        </div>
+                        <!-- todo -->
+
+
+                        <div class="col-4 order-md-2 my-3">
+
+                            <div class="row">
+                                <div class="col-12 py-2 border rounded mb-3">
+
+                                    <div class="row mb-3 border-bottom">
+                                        <div class="col ">
+                                            <h3 class="ps-3">Todo</h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-check border rounded">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-check form-check-inline py-2">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="inlineCheckbox1" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineCheckbox1">Kickoff nuove classi</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-check form-check-inline py-2">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="inlineCheckbox1" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineCheckbox1">Lezione su Bootstrap 5 in classe
+                                                                #75</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+
+                                                        <div class="form-check form-check-inline py-2">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="inlineCheckbox1" value="option1">
+                                                            <label class="form-check-label"
+                                                                for="inlineCheckbox1">Controllare username github
+                                                                studenti</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 py-2 border rounded">
+                                    <figure class="border rounded ">
+                                        <img class="img-fluid" src="./Img/stats.jpeg" alt="">
+                                        <div class="row px-3 mb-3 ">
+                                            <div class="col-12">
+                                                <h4>Utenti attivi</h4>
+                                                <span>Lista degli utenti attivi in piataforma nell'ultimo mese</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="row px-3 pt-3"> -->
+                                        <div class="col-12 border py-2">
+                                            <span class="ps-3">Gennaio: 1200</span>
+                                        </div>
+                                        <div class="col-12 border py-2">
+                                            <span class="ps-3">Febbraio: 800</span>
+                                        </div>
+                                        <div class="col-12 border py-2 mb-3">
+                                            <span class="ps-3">Marzo: 1500</span>
+                                        </div>
+
+
+                                        <div class="link-repo ps-3 mb-3">
+                                            <a href="#">Visualizza report approfondito</a>
+                                        </div>
+                                    </figure>
+
+
                                 </div>
                             </div>
 
-                        
-                                <nav aria-label="breadcrumb" class="bg-transparent " >
-                                    <ol class="breadcrumb  d-flex align-items-center gap-2 indigo lighten-6 first-1">
-                                        <li><a class="text-white text-decoration-none " href="">
-                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                            3 app
-                                        </button></a>
-                                            <img class="ms-md-2" src="https://img.icons8.com/offices/30/000000/double-right.png" width="20" height="20"> 
-                                        </li>
-                                        
-                                        <li class="d-lg-none"><a class="text-white text-decoration-none" href="#"> <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button></a></li>
-                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
-                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                            Boolean mobile app
-                                            </button>
-                                        </a></li>
-                                    
-                                        
-                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
-                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                        Boolean web app
-                                            </button>
-                                        </a></li>
-                                        
-                                        <li class="d-none d-lg-block"><a class="text-white text-decoration-none " href="">
-                                            <button type="button" class="btn btn-outline-light rounded-pill border-0 bg-dark bg-opacity-50 text-center ">
-                                            Boolean blog app
-                                            </button>
-                                        </a></li>    
-                                    </ol>
-                                </nav>
-                        </div>  
+                        </div>
+
+
+                        <!--fine todo  -->
+
                     </div>
 
-                    <div class="col col-md-3 col-lg-4 order-md-1">
-                        <div class="online-students pt-2">
-                            <p class="m-0">Studenti online negli ultimi 30 minuti</p>
-                            <span class="fs-3 ">125</span>
-                        </div>
-                    </div>
-
-                    <div class="col col-lg-2 order-3 order-md-0">
-                        <div class="new-student d-flex gap-3 align-items-center pt-3 ">
-                            <div class="new-student-text">
-                                <p class="m-0">Nuovo studente</p>
-                            </div>
-                        
-                            <button type="button" class="btn btn-outline-light text-center ">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                
-            </div>
-
-<!--fine header  -->
-
-            <!--main  -->
-            <div class="container-fluid">
-                <div class="row flex-nowrap">
-                    <div class="col-8 my-3 border border-light-subtle rounded">
-                        <div class="row border-bottom">
-                            <div class="col ">
-                                <h1>Prossime classi</h1>
-                            </div>
-                        </div>
-                        
-
-                        <div class="row">
-                         
-                                <div class="col-6">Nome</div>
-                                <div class="col-2 text-center">Data inizio</div>
-                                <div class="col-1 text-center">ROI</div>
-                                <div class="col-1 text-center">Stato</div>
-                                <div class="col-2 text-center">Azioni</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-                        
-                
-                    </div>
-
-                    <div class="col-4">
-                        <div class="col">
-                            <h1>Ciao</h1>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                        </div>
-                    </div>
+                    <!--fine main  -->
                 </div>
 
-                <div class="col-8">
-                    <div class="col">
-                        <h1>Ciao</h1>
-                    </div>
 
-                    <div class="row">
-                     
-                            <div class="col-8 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                            <div class="col-1 test">hello</div>
-                    </div>
             </div>
 
-            <!--fine main  -->
 
 
 
-        </div>
-    </div>
 
 
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+</body>
 
-                
-
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
 </html>
