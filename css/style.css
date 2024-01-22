@@ -4,9 +4,6 @@
     height: 40px;
 }
 
-.style-height-img-2{
-    min-width: 130px;
-}
 
 .my-sidebar{
     width: 137px;
@@ -25,8 +22,11 @@
         width:68px;
     }
 }
+ .my-modal{
+    height: calc(100vh - 50px);
+ }
 
-.test{
-    padding: 20px;
-    background-color: aqua;
-}
+ .modal-right {
+    margin-right: 0;
+    margin-left: auto;
+  }
