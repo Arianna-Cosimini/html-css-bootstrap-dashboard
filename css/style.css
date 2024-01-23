@@ -4,6 +4,9 @@
     height: 40px;
 }
 
+.fa-solid.fa-bell{
+    color: #fe8f03;
+}
 
 .my-sidebar{
     width: 137px;
@@ -12,8 +15,13 @@
 .my-height{
     height: calc(100vh - 54px);
 }
-.my-height-container{
-    height: calc(100vh - 174px);
+
+ button.table-hover:hover {
+    background-color: #a09898;
+}
+
+.color-breadcrumbs{
+    filter: brightness(0) invert(1);
 }
 
 
@@ -22,11 +30,12 @@
         width:68px;
     }
 }
- .my-modal{
-    height: calc(100vh - 50px);
- }
 
- .modal-right {
-    margin-right: 0;
-    margin-left: auto;
-  }
+@media screen and (min-width: 992px) {
+    .modal-fullscreen {
+        width: 80%;
+        margin-right: 0;
+        margin-left: 20%;
+    }
+}
+
